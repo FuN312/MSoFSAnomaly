@@ -55,13 +55,11 @@ def read_csv_to_draw(directory):
                     end = max(rect_x)
                     plt.fill_between(x[start - 1:end], np.min(data_df), np.max(data_df), color='gray', alpha=0.3)
 
-                    # 添加标签
+
                     label_x = np.mean(x[start - 1:end])
                     label_y = np.max(data_df) + 0.01
                     plt.text(label_x, label_y, label, ha='center', va='bottom', fontsize=10, color='black', weight='bold')
 
-
-                # 添加标题和坐标轴标签
                 plt.xlabel('Timestamp/minutes')
                 plt.ylabel(metrics_name)
                 #plt.legend()
