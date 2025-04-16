@@ -36,7 +36,6 @@ def compute_trace_name(fault_inject_data):
                 hour1 = hour.zfill(2)
             inject_time2 = f"{hour1}_{minute1:02d}"
 
-            # 加两分钟
             minute2 = minute + 2
             if minute2 >= 60:
                 hour2 = str(int(hour) + 1).zfill(2)
