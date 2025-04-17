@@ -22,7 +22,6 @@ class Transformer(nn.Module):
         ), "MLP ratio should be an integer for valid "
         mlp_dim = int(mlp_ratio * dim)
 
-        #transformer encoder: norm+atttion, norm+mlp
         for _ in range(depth):
             self.layers.append(
                 nn.ModuleList(
